@@ -1,0 +1,41 @@
+<!-- WAP to demonstrate change in properties of HTML element using JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change HTML Element Properties with JS</title>
+    <style>
+        #myParagraph {
+            color: blue;
+            font-size: 16px;
+            border: 1px solid blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="myParagraph">This is my  paragraph.</p>
+    <button onclick="changeProperties()">Change Properties</button>
+
+    <script>
+        function changeProperties() {
+
+            const paragraphElement = document.getElementById("myParagraph");
+
+
+            paragraphElement.style.color = "red";
+            paragraphElement.style.backgroundColor = "lightyellow";
+            paragraphElement.style.fontSize = "20px";
+            paragraphElement.style.border = "2px green";
+
+        }
+    </script>
+
+</body>
+
+</html>

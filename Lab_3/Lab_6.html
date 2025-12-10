@@ -1,0 +1,45 @@
+<!-- Demonstrate the Array and Object Destructuring -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Destructure Of Array...
+
+        var arr = [101, "abc", 23010101193, "abc@abc.com"];
+
+        const [rNo, Name, eNo, eMail] = arr;
+
+        document.write("Roll No : " + rNo+`<br>`);
+        document.write("Name : "+Name+`<br>`);
+        document.writeln("Enrollment_Number: "+eNo+`<br>`);
+        document.writeln("EmaiID: "+eMail+`<br>`);
+
+        document.writeln("-----------------------------------------"+`<br>`)
+        //Destructure Of Object...
+        
+
+        var student = {
+            name: "xyz",
+            rNo: 101,
+            eNo: 23010101193,
+            city: "rajkot"
+        }
+
+        const { name, rNo:RollNo,eNo:Enrollment_Number,city:City } = student;
+
+        document.writeln("Name : " + name+`<br>`);
+        document.writeln("RollNo : "+RollNo+`<br>`);
+        document.writeln("Enrollment_Number: "+Enrollment_Number+`<br>`);
+        document.writeln("City: "+City);
+    </script>
+
+</body>
+
+</html>

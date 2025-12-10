@@ -1,0 +1,27 @@
+<!-- Script should announce that vowel is pressed. When the key is released background color should be changed to blue. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <label for="Element">Element:</label>
+    <input type="text" onkeyup="keyFunction(event)" placeholder="Enter element">
+    <script>
+        function keyFunction(e) {
+            var key = e.key.toLowerCase();
+            if (key === 'a' || key === 'e' || key === 'i' || key === 'o' || key === 'u') {
+                alert("Vowel " + key + " is pressed");
+                console.log("Vowel "+key+ " is pressed");
+            }
+            else{
+                console.log("Consonant " + key + " is pressed");
+            }
+
+            document.body.style.backgroundColor = "blue";}
+            
+    </script>
+ </body>
+ </html>

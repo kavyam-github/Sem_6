@@ -1,0 +1,32 @@
+<!-- WAP to demonstrate callbacks in JavaScript -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Callback
+    </title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function performOperation(value1, value2, callback) {
+            const result = value1 + value2;
+            
+            callback(result);
+        }
+
+        function displayResult(sum) {
+            document.write("The sum is:", sum);
+        }
+
+        
+        performOperation(5, 3, displayResult); 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!-- WAP to prepare student registration form and validate using JavaScript -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registration Form</title>
+ </head>
+ <body>
+
+    
+    <h2>Student registration Form</h2>
+    <form name="registrationForm" onsubmit="return validateForm()">
+
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" id="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" placeholder="Enter your Email" id="email" name="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" placeholder="Enter your Age" id="age" name="age" re><br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+</body>
+ </html>
+
+
+    <table border="2xp" cellpadding="10px" cellspacing="10px" margin-top="20px" text-align="center">
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            let EmailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (age == "" || age < 18 || age > 100) {
+                alert("Please enter a valid age between 18 and 100");
+                return false;
+            }
+
+            alert("Registration successful!");
+            return true;
+
+        }
+
+        </script>
+
+    </table>
+       

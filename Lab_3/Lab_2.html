@@ -1,0 +1,35 @@
+<!-- Demonstrate the difference between let and var. -->
+<!-- var function scope/global scope within particular function , let block scope within {} braces -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // var example changes value inside function 
+        var x = 10;
+        if (true) {
+            var x = 20;   
+        }
+        document.writeln("var x =", x);   // 20
+
+
+
+        // let example blocked scope, remains same during block
+        let y = 10;
+        if (true) {
+            let y = 20;   
+        }
+        document.writeln("let y =", y);   // 10
+
+    </script>
+</body>
+
+</html>

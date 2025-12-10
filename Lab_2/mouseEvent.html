@@ -1,0 +1,22 @@
+<!-- WAP to recognise which event is fired -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Mouse Event
+	</title>
+</head>
+<body>
+
+	<button onclick="identifyEvent(event)" ondblclick="identifyEvent(event)" onmouseover="identifyEvent(event)" onkeydown="identifyEvent(event)" onkeyup="identifyEvent(event)">Click</button>
+	<script type="text/javascript">
+
+        function identifyEvent(e) {
+            console.log(e.type);
+        }
+	</script>
+
+</body>
+</html>

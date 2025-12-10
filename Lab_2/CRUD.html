@@ -1,0 +1,60 @@
+<!-- WAP to perform CRUD operations on array using HTML and JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with ARRAY</title>
+</head>
+<body>
+        <input type="text" id="name" placeholder="Enter your Name">
+        <button onclick="addFuntion()">Add</button> <br><br>
+
+        <input type="text" id="index" placeholder="Enter index"> <br><br>
+        <input type="text" id="value" placeholder="Enter new Value"> 
+        <button onclick="editFunction()">Edit</button>
+
+        <div id="print"></div>
+
+        <script>
+
+            const arr = [];
+
+            function addFuntion(){
+                let add = document.getElementById("name"); 
+                arr.push(add.value);
+                add.value="";
+                display();
+            }
+            
+            function display(){
+                let dis = document.getElementById("print");
+                dis.innerHTML = "";  
+
+                for(let i = 0; i < arr.length; i++){
+                    dis.innerHTML += 
+                        arr[i] + 
+                        ` <button onclick="deleteFunction(${i})">Delete</button>` +
+                        '<br/><br/>';
+                }
+            }
+
+            function deleteFunction(index){
+                arr.splice(index,1);
+                display();
+            }
+
+            function editFunction() {
+                let index = document.getElementById("index").value;
+                let value = document.getElementById("value").value;
+
+                arr[index] = value;
+                display();
+                document.getElementById("index").value = "";
+                document.getElementById("value").value = "";
+           }
+
+        </script>
+</body>
+</html>
