@@ -1,0 +1,4 @@
+This is a sample text.
+It has multiple lines.	And tabs.
+This is the source file.
+It will be appended to the Sample file.
