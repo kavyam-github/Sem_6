@@ -1,0 +1,22 @@
+Step 1 : create a database in MySQL
+
+Step 2 : create a next application
+
+Step 3 : npm I mysql2 ,
+npm I prisma --save-dev , 
+npm i @ prisma/client , 
+npm i @prisma/adapter-mariadb
+
+Step 4 : npx prisma init (schema.prisma and .env file will be generated)
+
+Step 5 : in env file -> DATABASE_URL = "connection string..." , do changes from postgrace to MySQL
+
+Step 6 : in schema.prisma -> provider = "mysql"
+
+Step 7 : npx prisma db pull 
+
+Step 8 : npx prisma generate
+
+Step 9: lib/prisma.ts
+
+Step 10 : app/api/users/page.tsx

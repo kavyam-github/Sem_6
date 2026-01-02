@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model userdetails {
+  userID   Int    @id
+  UserName String @db.VarChar(100)
+  Password String @db.VarChar(100)
+}
